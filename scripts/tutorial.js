@@ -294,12 +294,54 @@
 //iterator methods\\
 
 //we access index varaible typeof Symbol.iterator to check if it is a function so we know that this varaible we can use it in for of LOOP or undefind which is NOT
-let str = "Hello";
-let arr = [1, 2, 3];
-let num = 5;
-let obj = { name: "mahdi" };
+// let str = "Hello";
+// let arr = [1, 2, 3];
+// let num = 5;
+// let obj = { name: "mahdi" };
 
-console.log(typeof str[Symbol.iterator]);
-console.log(typeof arr[Symbol.iterator]);
-console.log(typeof num[Symbol.iterator]);
-console.log(typeof obj[Symbol.iterator]);
+// console.log(typeof str[Symbol.iterator]);
+// console.log(typeof arr[Symbol.iterator]);
+// console.log(typeof num[Symbol.iterator]);
+// console.log(typeof obj[Symbol.iterator]);
+
+// Iterable{
+//     [symbol.Iterator]():Iterator
+// }
+// Iterator{
+//     next():IResultObj
+// }
+// IResultObj{
+//     value: any
+//     done:bool
+// }
+
+// let's create our iterator
+
+function createIterator(arr) {
+  let count = 0;
+
+  return {
+    next: function () {
+      return count < arr.length
+        ? {
+            value: arr[count++],
+            done: false,
+          }
+        : {
+            value: undefined,
+            done: true,
+          };
+    },
+  };
+}
+
+const iterator = createIterator([1, 2, 3, 1, 2, 3]);
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());

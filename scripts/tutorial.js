@@ -347,14 +347,44 @@
 // console.log(iterator.next());
 
 //generator is a function capable to pause and resumig with help of yeild Keyword
-function* createGenerator() {
-  yield 1;
-  console.log("afrer 1st yeild");
-  yield 2;
-}
+// function* createGenerator() {
+//   yield 1;
+//   console.log("afrer 1st yeild");
+//   yield 2;
+// }
 
-let myGen = createGenerator();
+// let myGen = createGenerator();
 
-console.log(myGen.next()); //return an obj with the value reutrn from the func
-console.log(myGen.next());
-console.log(myGen.next());
+// console.log(myGen.next()); //return an obj with the value reutrn from the func
+// console.log(myGen.next());
+// console.log(myGen.next());
+
+//TYPESCRIPT
+//IS supperest of javascript and types are optional  for identify mistakes during development //TS === all esX javascript
+
+//decalre varaibles in TS
+
+//type infirance you can hover lable and you will see the type infirance
+// var x = 10;
+// var y = "10";
+// var z = true;
+
+// //type anotation (specifaction)
+// var a: number = 10;
+// var b: string = "hello";
+// //any type is the base type for any declarative value
+
+// var info: any;
+
+// // this is what javascript do
+// info = 10
+// info = 'Hello'
+// info = true
+
+//enum used to give frindly names for numric value and create specifque type for a varaible
+
+// enum EyeColor { Brown=2,Black=4,Blue=32 }
+
+// var myEyeColor = EyeColor.Black
+// console.log(myEyeColor)//4
+// console.log(EyeColor[myEyeColor])//Black

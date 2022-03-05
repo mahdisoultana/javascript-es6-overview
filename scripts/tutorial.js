@@ -388,3 +388,43 @@
 // var myEyeColor = EyeColor.Black
 // console.log(myEyeColor)//4
 // console.log(EyeColor[myEyeColor])//Black
+
+// Arrays and Tuples
+//array work the same way in typescript as to do in javascript only the declartion is to inferae because we have types
+
+// let strArr1: string[] = ['helllo', 'woeld'];
+// let strArr1: Array<string> = ['helllo', 'woeld'];
+
+// let anyArr: any[] = ['hello', 23, true];
+
+// let myTuples: [String, number]: ['hi', 23];
+
+// console.log(myTuple[0]);//hi
+// console.log(myTuple[1]);//23\
+// myTuples[2] = true;
+
+// console.log(myTuples[2]); true
+
+// interfaces is the most fllexible way to describe types in typesscript
+
+// interface Person{
+//   fname: String;
+//   lname: String;
+//   age?: Number;//this proerty is opetional
+// }
+
+// let employee1: Person = {
+//   fname: "helos",
+//   lname: "eBelas",
+//   age: 34
+// };
+// let employee2: Person = {
+//   fname: "helos",
+//   lname: "eBelas",
+// }
+
+//decorator is special kind of decalratin that can be attached to class or function or properties
+
+// @Name{
+
+// }

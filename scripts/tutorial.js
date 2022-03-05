@@ -317,31 +317,44 @@
 
 // let's create our iterator
 
-function createIterator(arr) {
-  let count = 0;
+// function createIterator(arr) {
+//   let count = 0;
 
-  return {
-    next: function () {
-      return count < arr.length
-        ? {
-            value: arr[count++],
-            done: false,
-          }
-        : {
-            value: undefined,
-            done: true,
-          };
-    },
-  };
+//   return {
+//     next: function () {
+//       return count < arr.length
+//         ? {
+//             value: arr[count++],
+//             done: false,
+//           }
+//         : {
+//             value: undefined,
+//             done: true,
+//           };
+//     },
+//   };
+// }
+
+// const iterator = createIterator([1, 2, 3, 1, 2, 3]);
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+
+//generator is a function capable to pause and resumig with help of yeild Keyword
+function* createGenerator() {
+  yield 1;
+  console.log("afrer 1st yeild");
+  yield 2;
 }
 
-const iterator = createIterator([1, 2, 3, 1, 2, 3]);
-console.log(iterator.next());
-console.log(iterator.next());
-console.log(iterator.next());
-console.log(iterator.next());
-console.log(iterator.next());
-console.log(iterator.next());
-console.log(iterator.next());
-console.log(iterator.next());
-console.log(iterator.next());
+let myGen = createGenerator();
+
+console.log(myGen.next()); //return an obj with the value reutrn from the func
+console.log(myGen.next());
+console.log(myGen.next());

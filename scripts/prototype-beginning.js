@@ -7,7 +7,7 @@
 // let child = Object.create(parent);
 
 // child.mane = "ready";
-//child object don't have this property so object.create allows us to make a look up if we have any proprty called heritage (ex)
+//child object doesn't have this property so object.create allows us to make a look up if we have any proprty called heritage (ex)
 // console.log(child.heritage); //soultana
 
 // ///////////////

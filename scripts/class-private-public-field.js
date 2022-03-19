@@ -1,5 +1,6 @@
 //  Class field declarations for JavaScript\
 // (now in stage 4  mean that the addition is ready for inclusion in the formal ECMAScript standard )
+// https://github.com/tc39/proposal-class-fields
 
 //can we make this class better with class field Porposal ?
 // class Player {

@@ -13,27 +13,27 @@
 // ///////////////
 // let's make  logic reusable
 
-// function Child(name, age) {
-//   let child = {};
-//   child.name = name;
-//   child.age = age;
+function Child(name, age) {
+  let child = {};
+  child.name = name;
+  child.age = age;
 
-//   //let add some methods to this object
+  //let add some methods to this object
 
-//   child.getAge = function () {
-//     let age = this.age;
-//     console.log(age);
-//     return age;
-//   };
-//   child.sayHello = function () {
-//     console.log(`Hello i'm ${this.name}`);
-//   };
-//   return child;
-// }
+  child.getAge = function () {
+    let age = this.age;
+    console.log(age);
+    return age;
+  };
+  child.sayHello = function () {
+    console.log(`Hello i'm ${this.name}`);
+  };
+  return child;
+}
 
-// const mahdi = Child("mahdi", 23);
+const mahdi = Child("mahdi", 23);
 
-// console.log(mahdi.sayHello());
+console.log(mahdi.sayHello());
 //the problem with this approche that let's say we're building a game and each objector each player will have planty of methods so will get for a lot of memory stockage for each player and we have tons of players and ennemies
 
 //so to make thing much cleaner and much perfermance we will make one object the has all methods required and we will use them for all our player
@@ -97,23 +97,23 @@
 //well as you know javascript is a dynmaic language programming and also its involved each year in 2015 ES6
 //javascript community made new simple way to use function constructor the which is just a syntatic sugar like they said they not changing what under the hood javascript do like we went step by step to make a function constructor this feature called 'class' so if you have a different background from java or c++ you will  be familaire with the class consturctor let's how this look likes
 
-class Child {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
-  spells() {
-    console.log("kabra kadabra 🌌 🕸");
-  }
-  eat() {
-    console.log("i'm eating right now 🍖🥙🌭 ");
-  }
-  fight() {
-    console.log("punch with the dark magic🐱‍🏍");
-  }
-}
+// class Child {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   spells() {
+//     console.log("kabra kadabra 🌌 🕸");
+//   }
+//   eat() {
+//     console.log("i'm eating right now 🍖🥙🌭 ");
+//   }
+//   fight() {
+//     console.log("punch with the dark magic🐱‍🏍");
+//   }
+// }
 
-const name = new Child("anana", 34);
+// const name = new Child("anana", 34);
 
-console.log(name.eat());
+// console.log(name.eat());
 ///And Done yeah class is more convient way to construct an object and encapsulate all your method in your class consturct , and it's every good to know that

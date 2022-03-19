@@ -118,36 +118,36 @@ console.log(agile.energy); //34
 // console.dir(StaticMethod.methodInTheClass()); //"hello i'm a property in the this class  "
 // console.dir(StaticMethod.PropTypes); // {  userName: "", }
 
-// class PlayerInput {
-//   // to get rid of this consturctor is to find a way to bind the handleChange method so when we invoke it
-//   //it's going to bound to the correct context 'this'  🤨
-//   //
-//   //we know that the arrow function they don't have their own this keyword instead the "this"  keyword is bound lexically meaning that this keyword in arrow function they will act like a normal varaible and try to look up in his parent scoop if that has 'this' keyword
+class PlayerInput {
+  // to get rid of this consturctor is to find a way to bind the handleChange method so when we invoke it
+  //it's going to bound to the correct context 'this'  🤨
+  //
+  //we know that the arrow function they don't have their own this keyword instead the "this"  keyword is bound lexically meaning that this keyword in arrow function they will act like a normal varaible and try to look up in his parent scoop if that has 'this' keyword
 
-//   consturctor(props) {
-//     // super(props);
-//     // this.handleChange = this.handleChange.bind(this);
-//   }
-//   state = {
-//     username: "",
-//   };
-//   //if we change the handleChange from a function to an arrow function we can solve the bind line in the constructor with an arrow function so this.setState() 'this ' keyword i will be the playerInput because the value of this keyword lexically is PlayerInput class Constructor
-//   logThis = () => {
-//     console.log(this, "this"); // PlayerInput
-//   };
-//   handleChange = (event) => {
-//     this.setState({
-//       username: event.target.value,
-//     });
-//   };
+  consturctor(props) {
+    // super(props);
+    // this.handleChange = this.handleChange.bind(this);
+  }
+  state = {
+    username: "",
+  };
+  //   if we change the handleChange from a function to an arrow function we can solve the bind line in the constructor with an arrow function so this.setState() 'this ' keyword i will be the playerInput because the value of this keyword lexically is PlayerInput class Constructor
+  logThis = () => {
+    console.log(this, "this"); // PlayerInput
+  };
+  handleChange = (event) => {
+    this.setState({
+      username: event.target.value,
+    });
+  };
 
-//   render() {
-//     ////.......
-//   }
-// }
+  render() {
+    ////.......
+  }
+}
 
-// const inp = new PlayerInput();
-// inp.logThis();
+const inp = new PlayerInput();
+inp.logThis();
 //from developer expereinces class field is abovious one to use anstead of using es6 class
 
 // but we have some down sides like this one

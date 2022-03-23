@@ -15,12 +15,12 @@
 
 // the first question that you need to ask to know the this keyword is : where this function invoked ?
 
-function sayHi(name) {
-  console.log(" Hi 👋 " + name);
-}
+// function sayHi(name) {
+//   console.log(" Hi 👋 " + name);
+// }
 
 // if i told you what is the value of name you won't know because you will know until the sayHi is invoked
-sayHi("Mahdi");
+// sayHi("Mahdi");
 
 //here name === 'Mark'
 
